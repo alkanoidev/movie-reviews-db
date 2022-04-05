@@ -6,6 +6,8 @@ const mysql = require("mysql");
 const path = require("path");
 require("dotenv").config();
 
+const port = process.env.PORT || 3000;
+
 const db = mysql.createPool({
   host: process.env.HOST,
   user: process.env.USER,
@@ -60,6 +62,6 @@ app.put("/api/update", (req, res) => {
   );
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("running on port 3000");
 });
