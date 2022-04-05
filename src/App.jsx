@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "./App.css";
 import Card from "./Card";
+import {config} from "dotenv";
 
 function App() {
   const [movieName, setMovieName] = useState("");
@@ -9,12 +10,16 @@ function App() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/api/get")
+    Axios.get(`/api/get`)
     .then((res) => setList(res.data));
   }, [list]);
+  useEffect(() => {
+    config();
+  }, [])
+  
 
   const submit = () => {
-    Axios.post("http://localhost:3001/api/insert/", {
+    Axios.post(`/api/insert/`, {
       movieName: movieName,
       review: review,
     });

@@ -11,7 +11,7 @@ function Card(props) {
       <h3>{props.movieReview}</h3>
       <button
         onClick={() => {
-          Axios.delete(`http://localhost:3001/api/delete/${props.id}`);
+          Axios.delete(`/api/delete/${props.id}`);
         }}
       >
         Delete
@@ -26,7 +26,7 @@ function Card(props) {
       />
       <button
         onClick={() => {
-          Axios.put("http://localhost:3001/api/update", {
+          Axios.put(`/api/update`, {
             movieName: props.movieName,
             movieReview: newReview
           });
