@@ -1,5 +1,6 @@
 # MovieDB
 ##### Write movie reviews
 ##### Create Read Update Delete
-##### React Nodejs Expressjs MySQL  
-<img src="https://github.com/alkanoidev/MovieDB/blob/main/Screenshot%202021-12-02%20002921.png" width="400px" alt="failed to load">
+##### React Nodejs Expressjs MySQL
+
+![](https://raw.githubusercontent.com/alkanoidev/MovieReviewsDB/master/Screenshot2021-12-02002921.png)
